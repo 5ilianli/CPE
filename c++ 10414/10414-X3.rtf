@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg950\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 #include<iostream>\
+#include<cstdio>\
+using namespace std;\
+\
+void b(long long int a)\
+\{\
+    if(a==0)\
+        return;\
+    if(a/10000000)\{\
+        b(a/10000000);\
+        cout<<" kuti";\
+        a%=10000000;\
+    \}\
+    if(a/100000)\{\
+        b(a/100000);\
+        cout<<" lakh";\
+        a%=100000;\
+    \}\
+    if(a/1000)\{\
+        b(a/1000);\
+        cout<<" hajar";\
+        a%=1000;\
+    \}\
+    if(a/100)\{\
+        b(a/100);\
+        cout<<" shata";\
+        a%=100;\
+    \}\
+    if(a)\
+        cout<<" "<<a;\
+\}\
+\
+int main(void)\
+\{\
+    long long int a;\
+    int Case=1;\
+\
+    while(cin>>a)\{\
+        printf("%4d.",Case);\
+        Case++;\
+        if(a)\
+            b(a);\
+        else\
+            cout<<" 0";\
+        cout<<endl;\
+    \}\
+\
+    return 0;\
+\}\
+\
+/*\
+//uva Accepted!\
+void b(long long int a)\
+\{\
+    if(a==0)\
+        return;\
+    if(a/10000000)\{\
+        b(a/10000000);\
+        cout<<" kuti";\
+        a%=10000000;\
+    \}\
+    if(a/100000)\{\
+        b(a/100000);\
+        cout<<" lakh";\
+        a%=100000;\
+    \}\
+    if(a/1000)\{\
+        b(a/1000);\
+        cout<<" hajar";\
+        a%=1000;\
+    \}\
+    if(a/100)\{\
+        b(a/100);\
+        cout<<" shata";\
+        a%=100;\
+    \}\
+    if(a)\
+        cout<<" "<<a;\
+\}\
+\
+int main(void)\
+\{\
+    long long int a;\
+    int Case=1;\
+\
+    while(cin>>a)\{\
+        printf("%4d.",Case);\
+        Case++;\
+        if(a)\
+            b(a);\
+        else if(a==0)\
+            cout<<" 0";\
+        cout<<endl;\
+    \}\
+\
+    return 0;\
+\}\
+\
+*/\
+}

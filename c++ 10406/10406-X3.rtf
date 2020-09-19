@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg950\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset136 STHeitiTC-Light;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 //new soln.\
+#include <iostream>\
+#include <algorithm>\
+#include <cstdlib>\
+using namespace std;\
+\
+/*\
+   
+\f1 \'ad\'59\'a6\'62\'aa\'bd\'bd\'75\'a4\'57\'ad\'6e\'a7\'e4\'a5\'58\'a4\'40\'c2\'49\'a5\'4f\'a8\'e4\'a8\'ec\'a8\'e4\'a5\'4c\'c2\'49\'aa\'ba\'b6\'5a\'c2\'f7\'a9\'4d\'b3\'cc\'a4\'70\'a1\'41
+\f0 \
+   
+\f1 \'aa\'ed\'a5\'dc\'b3\'6f\'ad\'d3\'c2\'49\'ac\'b0\'a8\'e4\'a5\'4c\'c2\'49\'ae\'79\'bc\'d0\'aa\'ba\'a4\'a4\'a6\'ec\'bc\'c6
+\f0 (
+\f1 \'ab\'44\'a5\'ad\'a7\'a1\'bc\'c6
+\f0 )
+\f1 \'a1\'43
+\f0 \
+   
+\f1 \'ad\'6e\'a7\'e4\'a5\'58\'a4\'a4\'a6\'ec\'bc\'c6\'aa\'ba\'a4\'e8\'aa\'6b\'a4\'51\'a4\'c0\'c2\'b2\'b3\'e6\'a1\'41\'a5\'fd\'b1\'4e\'a9\'d2\'a6\'b3\'c2\'49\'aa\'ba\'a6\'ec\'b8\'6d\'b1\'c6\'a7\'c7\'a1\'41
+\f0 \
+   
+\f1 \'ad\'59\'a6\'b3\'a9\'5f\'bc\'c6\'ad\'d3\'c2\'49\'a1\'41\'ab\'68\'a4\'a4\'a6\'ec\'bc\'c6\'ac\'b0\'b4\'4e\'ac\'b0\'be\'e3\'b8\'73\'bc\'c6\'be\'da\'aa\'ba\'a5\'bf\'a4\'a4\'b6\'a1\'a6\'ec\'b8\'6d\'aa\'ba\'bc\'c6\'a1\'46
+\f0 \
+   
+\f1 \'ad\'59\'a6\'b3\'b0\'b8\'bc\'c6\'ad\'d3\'c2\'49\'a1\'41\'ab\'68\'a4\'a4\'a6\'ec\'bc\'c6\'ac\'b0\'a4\'a4\'b6\'a1\'a8\'e2\'ad\'d3\'bc\'c6\'aa\'ba\'a5\'ad\'a7\'a1\'ad\'c8\'a1\'43
+\f0 \
+   
+\f1 \'a6\'62\'a6\'b9\'c3\'44\'a4\'a4\'ad\'59\'a6\'b3\'b0\'b8\'bc\'c6\'ad\'d3\'c2\'49\'a1\'41\'a8\'fa\'a5\'ad\'a7\'a1\'ad\'c8\'ab\'e1\'aa\'ba\'c2\'49\'a4\'a3\'bd\'d7\'ac\'4f\'a5\'7c\'b1\'cb\'a4\'ad\'a4\'4a\'a1\'41
+\f0 \
+   
+\f1 \'a9\'ce\'aa\'cc\'ac\'4f\'b5\'4c\'b1\'f8\'a5\'f3\'b1\'cb\'a5\'68\'b3\'a3\'a4\'a3\'b7\'7c\'bc\'76\'c5\'54\'b3\'cc\'b2\'d7\'aa\'ba\'b5\'aa\'ae\'d7\'a1\'43
+\f0 \
+   *
+\f1 \'aa\'60\'b7\'4e\'a5\'bb\'c3\'44\'a4\'a4\'a5\'69\'af\'e0\'b7\'7c\'a6\'b3\'a6\'68\'ad\'d3\'bf\'cb\'b1\'ad\'a6\'ed\'a6\'62\'a6\'50\'a4\'40\'a4\'e1\'a4\'a4\'a1\'41
+\f0 \
+   
+\f1 \'a8\'43\'a4\'40\'ad\'d3\'bf\'cb\'b1\'ad\'b3\'a3\'ad\'6e\'ba\'e2\'a4\'40\'a6\'b8\'b6\'5a\'c2\'f7\'a1\'41\'b5\'4c\'bd\'d7\'a5\'4c\'ad\'cc\'ac\'4f\'a4\'a3\'ac\'4f\'a6\'ed\'a6\'62\'a6\'50\'a4\'40\'a4\'e1\'b8\'cc\'a1\'43
+\f0 \
+*/\
+\
+int main(void)\
+\{\
+    int n;\
+    cin>>n;\
+\
+    while(n--)\{\
+        int num;\
+        cin>>num;\
+        int a[num];\
+        for(int i=0;i<num;i++)\
+            cin>>a[i];\
+        sort(a,a+num);\
+        int mid=num/2,sum=0;\
+        for(int i=0;i<num;i++)\
+            sum+=abs(a[mid]-a[i]);\
+        cout<<sum<<endl;\
+    \}\
+\
+    return 0;\
+\}\
+}

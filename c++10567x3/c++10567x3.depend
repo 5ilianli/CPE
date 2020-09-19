@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1569228672 source:c:\users\fandy\desktop\c++10567x3\main.cpp
+	<iostream>
+	<map>
+	<cstring>
+

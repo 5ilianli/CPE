@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1553099569 source:c:\users\fandy\desktop\c++ 10468\main.cpp
+	<iostream>
+	<stdio.h>
+	<memory.h>
+	<algorithm>
+

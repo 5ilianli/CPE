@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1569595222 source:c:\users\fandy\desktop\c++10557x3\main.cpp
+	<iostream>
+	<cstdlib>
+	<cmath>
+	<map>
+	<vector>
+	<algorithm>
+	<iomanip>
+
